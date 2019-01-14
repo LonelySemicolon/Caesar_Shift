@@ -33,7 +33,7 @@ int main(){
       for(int i = 0; i < cipherText.length(); i++){
         //the input text will be shifted by the value of the key
         //and stored back into the file.
-        decrypt[i] = ((((cipherText[i] - 97) + (26 - check)) % 25) + 97);
+        decrypt[i] = ((((cipherText[i] - 97) + (25 - check)) % 25) + 97);
       }
       cout << endl;
       for(int j = 0; j < cipherText.length(); j++){
