@@ -16,19 +16,29 @@ int main(){
   int check = 0;
 
   //Open the text file
-  ifstream myText ("Q1.txt");
+  ifstream myText ("Q1_U.txt");
 
   //read in the text file
   if(myText.is_open()){
     getline(myText, cipherText);
     //close the text file
     myText.close();
+
+    if(isupper(cipherText[0])){
+        for(int i = 0; i < cipherText.length(); i++){
+          cipherText[i] = tolower(cipherText[i]);
+        }
+      }
+    cout << "Cipher in lowercase:" << endl << cipherText << endl;
+
     //Loop to check multiple key values
     while(check != 99){
 
       cout << "Key to check" << endl;
       cin >> check;    
       cin.ignore(100, '\n');
+
+      
       
       for(int i = 0; i < cipherText.length(); i++){
         //the input text will be shifted by the value of the key
