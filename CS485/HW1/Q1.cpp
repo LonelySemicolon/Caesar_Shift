@@ -1,5 +1,5 @@
 //Homework 1, Question 1
-//Shift cipher
+//Shift cipher, enter a key value to shift each character
 
 #include <iostream>
 #include <cstring>
